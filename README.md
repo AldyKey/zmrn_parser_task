@@ -46,7 +46,7 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
   ```
   docker-compose down
   ```
-#### 
-Redis is used as the message broker for Celery to handle asynchronous tasks.
-Celery workers are running in separate Docker containers and can be managed using the docker-compose command line.
-####
+#### Redis is used as the message broker for Celery to handle asynchronous tasks. ####
+
+
+#### The project uses PostgreSQL as the database management system and runs in a separate Docker container. The database settings are stored in the settings.py file. ####
