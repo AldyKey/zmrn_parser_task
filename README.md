@@ -66,7 +66,7 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
   ```
   http://0.0.0.0:8000/news/stock/AMZN
   ```
-#### If you want to get news about Amazon between specific dates, you should two parameters to the url: "date_from" and "date_to" ####
+#### If you want to get news about Amazon between specific dates, you should add two parameters to the url: "date_from" and "date_to" ####
   ```
   http://0.0.0.0:8000/news/stock/AMZN?date_from=2023-01-09&date_to=2023-02-01
   ```
