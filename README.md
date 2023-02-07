@@ -25,7 +25,7 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
   ```
   cd zmrn_parser_task
   ```
-#### In the finnhub_parser folder create .env file ####
+#### Inside the finnhub_parser folder create .env file ####
 
 #### Copy the inside of .env_example file and paste it inside .env ####
 
@@ -37,7 +37,7 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
 #### Start the Docker containers: ####
 
   ```
-  docker-compose up
+  docker-compose up -d --build 
   ```
 #### Access the django server at: ####
 
@@ -47,9 +47,27 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
 #### How to stop the Docker containers: ####
 
   ```
-  docker-compose down
+  docker-compose down -v
   ```
 #### Redis is used as the message broker for Celery to handle asynchronous tasks. ####
 
-
 #### The project uses PostgreSQL as the database management system and runs in a separate Docker container. ####
+
+#### The parsing of each ticker will start at 0 minute of each hour. ####
+
+## Usage: ##
+
+#### Now, that you started Docker containers, you can send request to http://0.0.0.0:8000/ ####
+#### You can get all the available news for each ticker at an endpoint: #### 
+  ```
+  http://0.0.0.0:8000/news/stock/all
+  ```
+#### Also, you can get all the news for specific ticker, for example Amazon: ####
+  ```
+  http://0.0.0.0:8000/news/stock/AMZN
+  ```
+#### If you want to get news about Amazon between specific dates, you should two parameters to the url: "date_from" and "date_to" ####
+  ```
+  http://0.0.0.0:8000/news/stock/AMZN?date_from=2023-01-09&date_to=2023-02-01
+  ```
+
