@@ -28,12 +28,14 @@ services:
     command: celery -A apps.parser.configs worker -l info  
     depends_on:
       - redis
+    restart: on-failure
   
   celery-beat:
     build: ./
     command: celery -A apps.parser.configs beat -l info  
     depends_on:
       - redis
+    restart: on-failure
 
   
 volumes:
