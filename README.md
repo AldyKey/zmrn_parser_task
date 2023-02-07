@@ -4,6 +4,6 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
 
 ## Technologies used: ##
 - Python
-- Django
+- Django Rest Framework
 - Docker
 - PostgreSQL
