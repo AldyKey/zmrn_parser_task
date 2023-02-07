@@ -1,1 +1,1 @@
-#Finnhub Company News Parser
+# Finnhub Company News Parser
