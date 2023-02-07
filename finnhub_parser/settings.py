@@ -84,7 +84,6 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en'
 TIME_ZONE = 'Asia/Almaty'
 USE_I18N = True
-# I disabled the timezone use, because, for some reason there was a warning in celery worker console that was very disturbing
 USE_TZ = False
 USE_L10N = True
 
@@ -103,29 +102,29 @@ CELERYBEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 CELERY_BEAT_SCHEDULE = {
     "parsing_tsla": {
         "task": "apps.parser.tasks.parsing_news",
-        "schedule": crontab(hour="*/1"),
+        "schedule": crontab(hour="*", minute=0),
         "args": (("TSLA"),)
     },
     "parsing_amzn": {
         "task": "apps.parser.tasks.parsing_news",
-        "schedule": crontab(hour="*/1"),
+        "schedule": crontab(hour="*", minute=0),
         "args": (("AMZN"),)
     },
     "parsing_meta": {
         "task": "apps.parser.tasks.parsing_news",
-        "schedule": crontab(hour="*/1"),
+        "schedule": crontab(hour="*", minute=0),
         "args": (("META"),)
     },
     "parsing_msft": {
         "task": "apps.parser.tasks.parsing_news",
-        "schedule": crontab(hour="*/1"),
+        "schedule": crontab(hour="*", minute=0),
         "args": (("MSFT"),)
     },
     "parsing_nflx": {
         "task": "apps.parser.tasks.parsing_news",
-        "schedule": crontab(hour="*/1"),
+        "schedule": crontab(hour="*", minute=0),
         "args": (("NFLX"),)
-    },
+    }
 }
 
 TICKERS = os.environ.get("TICKERS").split(",")

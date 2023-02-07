@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-
+import datetime as dt
 from . import models as models
 
 def get_dates(company_symbol):
@@ -25,3 +25,11 @@ def get_dates(company_symbol):
         else:
             date_to = date_to_raw.strftime('%Y-%m-%d')
     return date_from, date_to
+
+def validate_date(date_raw):
+        try:
+            dt.date.fromisoformat(date_raw)
+            date = datetime.strptime(date_raw, "%Y-%m-%d")
+            return date
+        except ValueError:
+            return False
