@@ -27,9 +27,10 @@ def get_dates(company_symbol):
     return date_from, date_to
 
 def validate_date(date_raw):
-        try:
-            dt.date.fromisoformat(date_raw)
-            date = datetime.strptime(date_raw, "%Y-%m-%d")
-            return date
-        except ValueError:
-            return False
+    # Validating the string date and converting it to date
+    try:
+        dt.date.fromisoformat(date_raw)
+        date = datetime.strptime(date_raw, "%Y-%m-%d")
+        return date
+    except ValueError:
+        return False
