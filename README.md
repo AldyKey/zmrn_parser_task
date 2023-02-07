@@ -21,23 +21,28 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
 - If you are using Windows OS, download this repository and place it where you want to.
   
 ## Usage: ##
-### Move to the project folder: ###
+##### Move to the project folder: #####
 
   ```
   cd zmrn_parser_task
   ```
-### Build the docker containers: ###
+##### Build the docker containers: #####
 
   ```
   docker-compose build
   ```
-### Start the Docker containers: ###
+##### Start the Docker containers: #####
 
   ```
   docker-compose up
   ```
-### Access the django server at: ###
+##### Access the django server at: #####
 
   ```
   http://0.0.0.0:8000/
+  ```
+##### How to stop the Docker containers: #####
+
+  ```
+  docker-compose down
   ```
