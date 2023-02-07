@@ -20,14 +20,15 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
   ```
 - If you are using Windows OS, download this repository and place it where you want to.
   
-## Usage: ##
 #### Move to the project folder: ####
 
   ```
   cd zmrn_parser_task
   ```
 #### In the finnhub_parser folder create .env file ####
+
 #### Copy the inside of .env_example file and paste it inside .env ####
+
 #### Build the docker containers: ####
 
   ```
