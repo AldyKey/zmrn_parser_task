@@ -26,6 +26,8 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
   ```
   cd zmrn_parser_task
   ```
+#### In the finnhub_parser folder create .env file ####
+#### Copy the inside of .env_example file and paste it inside .env ####
 #### Build the docker containers: ####
 
   ```
