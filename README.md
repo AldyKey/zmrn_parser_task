@@ -14,6 +14,7 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
 
 ## Installation: ##
 - If you are using Linux-based OS, open the terminal and paste this:
+
   ```
   git clone https://github.com/AldyKey/zmrn_parser_task.git
   ```
