@@ -71,3 +71,4 @@ This is a django project that parses news about Amazon, Meta, Tesla, Apple and M
   http://0.0.0.0:8000/news/stock/AMZN?date_from=2023-01-09&date_to=2023-02-01
   ```
 
+#### The list of available tickers is inside the .env_example file ####
